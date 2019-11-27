@@ -2,9 +2,18 @@
 
 ## Allgemeines
 
-$f^X (x)=(F^X(x))‘$, $\int_{-\infty}^{\infty}f(x)dx=1$, ……Dichtefunktion (PMF Probability Mass Function)
+$f^X (x)=(F^X(x))‘$, $\int_{-\infty}^{\infty}f(x)dx=1$, ……Dichtefunktion 
 
-$F(x)$ …………………Verteilungsfunktion (CDF Cumulative Distribution Function)
+PMF (Probability Mass Function) ist anscheinend diskret, also P(X=x)=f(x)
+
+$F(x)$ …………………Verteilungsfunktion (CDF Cumulative Distribution Function) sowohl diskret als auch stetig
+
+Binomialkoeffizient: ${N \choose k} = \frac{N!}{k!\cdot (N-k)!}$
+
+Kleiner Gauß: $\sum_{k=0}^{n} k = \frac {n(n+1)} 2$
+
+Geometrische Reihe: $\sum_{k=0}^{n} q^k = \frac {q^{n+1}-1} {q-1}$
+$\text{bei } q<1, \lim_{n \to \infty} \Rightarrow \frac 1 {1-q}$
 
 [Mengenlehre.tif](Zusammenfassungen\Mengenlehre.tif) 
 
@@ -30,7 +39,11 @@ Ziehe n mal mit Zurücklegen mit $N_1$ weißen und $N$ gesamt Kugeln und $p=\fra
 
 $P(|\text{weiß}|=k)=\binom n k p^k (1-p)^{n-k}, k \in \{0, …, n\}$
 
-${N \choose k} = \frac{N!}{k!\cdot (N-k)!}$
+### (Multinomial)
+
+Ziehe $n$ mal mit Zurücklegen, mit $N_1$ Kugeln der Farbe 1, $N_2$ der Farbe 2 usw. und $N$ gesamt
+
+$P(|\text{Farbe } i| = k_i) = \frac {\frac {n!} {\prod (k_i!)} \cdot \prod (N_i)} {N^n}$
 
 ### Poisson
 
@@ -62,9 +75,9 @@ $F(x) = \begin{cases} 0 &\mbox{falls } x < a \\ \frac{x-a}{b-a} &\mbox{falls } a
 
 $X \sim \text{Exp}(\lambda)$
 
-$f(x) = \begin{cases} \lambda \cdot \exp (-\lambda x), & x \geq 0 \\ 0, & x<0\end{cases}$
+$f(x) = \begin{cases} \lambda \cdot e ^{-\lambda x}, & x \geq 0 \\ 0, & x<0\end{cases}$
 
-$F(x) = \begin{cases} 1 – \exp (-\lambda x), & x \geq 0 \\ 0, & x<0\end{cases}$
+$F(x) = \begin{cases} 1 – e^{-\lambda x}, & x \geq 0 \\ 0, & x<0\end{cases}$
 
 ### Normalverteilt
 
@@ -102,9 +115,9 @@ $P(X\leq x_1 \text{oder } Y \leq y_1) = P(X\leq x_1) + P(Y \leq y_1) - P(X \leq 
 
 ## Bedingte Wahrscheinlichkeiten
 
-$P(A|B) = \frac {P(B) \cdot P(B|A)} {P(B)}$
+$P(A|B) = \frac {P(A) \cdot P(B|A)} {P(B)}$
 
-$P(A \cap B)= P(A|B_i) \cdot P(B_i)$
+$P(A \cap B)= P(A|B) \cdot P(B)$
 
 $P(B_k|A) = \frac {P(B_k)P(A|B_k)} {\sum P(B_i)P(A|B_i)}$
 
