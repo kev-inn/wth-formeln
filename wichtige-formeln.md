@@ -10,15 +10,21 @@ $F(x)$ …………………Verteilungsfunktion (CDF Cumulative Distribution Fun
 
 ## Diskrete Verteilungen
 
+$X \sim Unif(\Omega)$
+
 $F^X(x) = \sum p_k$
 
 ### Hypergeometrisch
+
+$X \sim H_{W,S}$
 
 Ziehe $n$ mal ohne Zurücklegen mit $N_1$ weißen und N gesamt Kugeln
 
 $P(|\text{weiß}|=k)=\frac {\binom {N_1} k \binom {N-N_1}{n-k}} {\binom N n}, k \in \{0,...,n\}$
 
 ### Binomial
+
+$X \sim B_{n,p}$
 
 Ziehe n mal mit Zurücklegen mit $N_1$ weißen und $N$ gesamt Kugeln und $p=\frac {N_1} N$
 
@@ -28,11 +34,15 @@ ${N \choose k} = \frac{N!}{k!\cdot (N-k)!}$
 
 ### Poisson
 
+$X \sim P_{\lambda}$
+
 Mit Zurücklegen, Anzahl der Ziehungen $n \to \infty$, relative Häufigkeit der weißen $p \to 0$, $np \to \lambda >0$
 
 $P(|\text{weiss}|=k)=\frac {\lambda^k e^{-\lambda}} {k!}$
 
 ### Geometrisch
+
+$X \sim G_{p}$
 
 Mit zurücklegen, Anzahl der Ziehungen bis eine weiße Kugel gezogen wird
 
